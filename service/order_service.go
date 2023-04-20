@@ -193,7 +193,7 @@ func (o *orderService) UpdateOrder(orderId int, payload dto.NewOrderRequest) (*d
 	}
 
 	itemsResponse := []dto.ItemResponse{}
-	if len(itemsResponse) != 0 {
+	if len(orderItem.Items) != 0 {
 		for _, eachItem := range orderItem.Items {
 			itemResponse := eachItem.ItemToItemResponse()
 
